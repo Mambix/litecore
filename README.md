@@ -1,13 +1,13 @@
 # Supported tags and respective `Dockerfile` links
 * `latest` ([Dockerfile])
 
-![Bitcore v4.1.0](https://img.shields.io/badge/bitcore-v4.1.0-green.svg)
+![Litecore v4.1.0](https://img.shields.io/badge/litecore-v4.1.10-green.svg)
 
-## Bitcore
-Infrastructure to build Bitcoin and blockchain-based applications for the next generation of financial technology.
+## Litecore
+Infrastructure to build Litecoin and blockchain-based applications for the next generation of financial technology.
 
 Links:
-* [Bitcore site];
+* [Litecore site];
 * [GitHub repo].
 
 ## Running the container
