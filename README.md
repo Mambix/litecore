@@ -15,16 +15,16 @@ Links:
 Create a volume where all data and blockchain data will be stored:
 
 ```
-docker volume create --name bitcore_data
+docker volume create --name litecore_data
 ```
 
 Now run the container, publishing ports 3001 (for Bitcore) and 8333 (for bitcoind).
 
 ```
-docker run -d --restart=always --name bitcore \
+docker run -d --restart=always --name litecore \
    -p 3001:3001 -p 8333:8333 \
-   -v bitcore_data:/root/.bitcore \
-   mambix/bitcore
+   -v litecore_data:/root/.litecoin \
+   mambix/litecore
 ```
 
 If you want to run Litecore on the Testnet, first you need to add a configuration file to the data volume indicating that. Locate the data volume mount location on the Docker host:
@@ -37,7 +37,7 @@ Create a file named `litecore-node.json` in that directory with the following co
 
 ```
 {
-  "datadir": "/root/.litecore/data",
+  "datadir": "/root/.litecoin/data",
   "network": "testnet",
   "port": 3001,
   "services": [
@@ -56,7 +56,7 @@ Now run the container, publishing ports 3001 (for Litecore) and 18333 (for litec
 ```
 docker run -d --restart=always --name litecore \
    -p 3001:3001 -p 18333:18333 \
-   -v litecore_data:/root/.litecore \
+   -v litecore_data:/root/.litecoin \
    mambix/litecore
 ```
 
