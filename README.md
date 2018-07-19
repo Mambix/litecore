@@ -7,7 +7,7 @@
 Infrastructure to build Litecoin and blockchain-based applications for the next generation of financial technology.
 
 Links:
-* [Litecore site];
+* [Litecoin site];
 * [GitHub repo].
 
 ## Running the container
