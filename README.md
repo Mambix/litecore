@@ -2,6 +2,8 @@
 * `latest` ([Dockerfile])
 
 ![Litecore v4.1.0](https://img.shields.io/badge/litecore-v4.1.10-green.svg)
+[![](https://images.microbadger.com/badges/image/mambix/litecore.svg)](https://microbadger.com/images/mambix/litecore "Get your own image badge on microbadger.com")
+[![](https://images.microbadger.com/badges/version/mambix/litecore.svg)](https://microbadger.com/images/mambix/litecore "Get your own version badge on microbadger.com")
 
 ## Litecore
 Infrastructure to build Litecoin and blockchain-based applications for the next generation of financial technology.
