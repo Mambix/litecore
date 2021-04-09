@@ -29,6 +29,13 @@ docker run -d --restart=always --name litecore \
    mambix/litecore
 ```
 
+You can change settings if needed and restart the container to take effect. In `bitcoin.conf` file
+you will find settings for the node daemon if you need to adjust parameters. I would suggest adding this line to the end:
+```
+maxconnections=500
+```
+
+
 If you want to run Litecore on the Testnet, first you need to add a configuration file to the data volume indicating that. Locate the data volume mount location on the Docker host:
 
 ```
@@ -53,10 +60,12 @@ There is file named `litecore-node.json` created in that directory, update it wi
 }
 ```
 
-You can change settings here if needed and restart the container to take effect. In `bitcoin.conf` file
-you wll find settings for the node daemon if you need to adjust parameters. I would suggest adding this line to the end:
+Run the testnet container with:
 ```
-maxconnections=500
+docker run -d --restart=always --name litecore \
+   -p 3001:3001 -p 8333:8333 \
+   -v litecore_data:/root/.litecoin \
+   mambix/litecore
 ```
 
 __Also don't forget to change the user/password for RPC access if your insight is exposed to the internet!__
